@@ -124,7 +124,12 @@
             }
             var day = 1;
             var dayOfNextMonth = 1;
-            for (var i = 0; i < 42; i++) {
+            var numberOfDayCalendar = 35;
+            if(dWeekDayOfMonthStart + dLastDayOfMonth > 35)
+            {
+                numberOfDayCalendar = 42;
+            }
+            for (var i = 0; i < numberOfDayCalendar; i++) {
                 var cDay = $('<div/>');
                 if (i < dWeekDayOfMonthStart) {
                     cDay.addClass('c-day-previous-month c-pad-top');
